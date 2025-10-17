@@ -39,7 +39,7 @@ app.post("/students", async (req, res) => {
 });
 
 //updating student data
-app.put(".students/:id", async (req, res) => {
+app.put("/students/:id", async (req, res) => {
   try {
     const { id } = Number(req.params);
     const updatedStudent = await Student.findByIdAndUpdate(id, req.body, {
@@ -72,5 +72,5 @@ app.delete("/students/:id", async (req, res) => {
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-  console.log("server is running port ${PORT}");
+  console.log(`server is running on port ${PORT}`);
 });

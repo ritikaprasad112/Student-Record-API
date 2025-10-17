@@ -6,7 +6,7 @@ const studentSchema = new mongoose.Schema({
     required: [true, "Name is required"],
   },
   course: {
-    typr: String,
+    type: String,
     required: [true, "Course is required"],
   },
   age: {
